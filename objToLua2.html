@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Converter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+</head>
+<body>
+    <input type="file" id="fileInput" accept=".obj, image/*">
+    <button onclick="convert()">Convert</button>
+    <div class="code-box">
+        <textarea id="imageData" rows="15" cols="50" placeholder="Code appears here" readonly></textarea>
+    </div>
+    <button onclick="copyCode()">Copy Code</button>
+
+    <script src="shared.js"></script>
+    <script src="objToLua2.js"></script>
+</body>
+</html>

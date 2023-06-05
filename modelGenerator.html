@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Model Generator</title>
+  <style>
+    #model-viewer {
+      width: 800px;
+      height: 600px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Model Generator</h1>
+
+  <form>
+    <textarea id="codeInput" rows="10" cols="50" placeholder="Paste your model code here"></textarea>
+    <button type="button" onclick="generateModel()">Generate Model</button>
+  </form>
+
+  <div id="model-viewer"></div>
+
+  <script src="shared.js"></script>
+  <script src="modelGenerator.js"></script>
+</body>
+</html>

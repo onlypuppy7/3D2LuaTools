@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texture Painter</title>
+  <style>
+    .canvas-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 256px;
+    }
+    .pixel {
+      width: 16px;
+      height: 16px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .color-picker {
+      margin-top: 16px;
+    }
+    .code-box {
+      width: 100%;
+      margin-top: 16px;
+    }
+    .code-box textarea {
+      width: 100%;
+      resize: vertical;
+    }
+  </style>
+</head>
+<body>
+  <h1>Texture Painter</h1>
+  <div class="canvas-container"></div>
+
+  <div class="controls">
+    <input type="color" id="colorPicker">
+    <button onclick="setCanvasSize()">Set Size</button>
+    <button onclick="copyImageData()">Copy Image Data</button>
+    <button onclick="clearImageData()">Clear(!)</button>
+    <input type="file" accept="image/*" onchange="handleImageUpload(event)">
+  </div>
+  
+  <div class="code-box">
+    <textarea id="imageData" rows="15" cols="50" placeholder="Code appears here" readonly></textarea>
+  </div>
+  
+  <script src="shared.js"></script>
+  <script src="texturePainter.js"></script>
+</body>
+</html>
